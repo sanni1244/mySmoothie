@@ -1,0 +1,12 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "mon/package.json",
+        "use": "@vercel/static-build",
+        "config": { "distDir": "mon/dist" },
+        "buildCommand": "npm run build"
+      }
+    ]
+  }
+  
