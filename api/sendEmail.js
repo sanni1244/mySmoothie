@@ -10,9 +10,9 @@ const PORT = process.env.PORT || 5000;
 
 app.use(bodyParser.json());
 
-app.post('/api/send-email', (req, res) => {
+app.post('/send-email', (req, res) => {
   const { subject, name, orderName, price, message, myNumber } = req.body;
-
+ 
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
