@@ -1,12 +1,14 @@
 {
     "version": 2,
     "builds": [
-      { "src": "mon", "use": "@vercel/static-build", "config": { "distDir": "mon/build" } },
-      { "src": "api/sendEmail.js", "use": "@vercel/node" }
-    ],
-    "routes": [
-      { "src": "/api/(.*)", "dest": "api/sendEmail.js" },
-      { "src": "/(.*)", "dest": "mon/build/$1" }
+      {
+        "src": "api/sendEmail.js",
+        "use": "@vercel/node"
+      },
+      {
+        "src": "mon/dist/*", 
+        "use": "@vercel/static"
+      }
     ]
   }
   
