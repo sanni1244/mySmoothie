@@ -6,6 +6,10 @@
         "use": "@vercel/static-build",
         "config": { "distDir": "mon/dist" },
         "buildCommand": "npm run build"
+      },
+      {
+        "src": "api",
+        "use": "@vercel/node"
       }
     ]
   }
