@@ -2,13 +2,20 @@
     "version": 2,
     "builds": [
       {
-        "src": "api/sendEmail.js",
-        "use": "@vercel/node"
+        "src": "mon/package.json",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "mon/build"
+        }
       },
       {
-        "src": "mon/dist/*", 
-        "use": "@vercel/static"
+        "src": "api/sendEmail.js",
+        "use": "@vercel/node"
       }
+    ],
+    "routes": [
+      { "handle": "filesystem" },
+      { "src": "/api/send-email", "dest": "api/sendEmail.js" }
     ]
   }
   
