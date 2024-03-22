@@ -5,7 +5,7 @@
         "src": "mon/package.json",
         "use": "@vercel/static-build",
         "config": { "distDir": "mon/dist" },
-        "buildCommand": "npm run build"
+        "buildCommand": "next build"
       },
       {
         "src": "api",
