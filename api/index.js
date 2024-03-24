@@ -9,7 +9,7 @@ app.use(bodyParser.json()); // Parse JSON request bodies
 
 const PORT = process.env.PORT || 5000;
 
-app.post('/api', (req, res) => {
+app.post('/', (req, res) => {
   const { subject, name, orderName, price, message, myNumber } = req.body;
 
   if (!subject || !name || !orderName || !price || !message || !myNumber) {
