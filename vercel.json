@@ -1,0 +1,21 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "front/index.html",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "front/build"
+        }
+      },
+      {
+        "src": "api/index.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      { "handle": "filesystem" },
+      { "src": "/api", "dest": "api/index.js" }
+    ]
+  }
+  
