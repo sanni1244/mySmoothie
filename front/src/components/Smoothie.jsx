@@ -4,7 +4,7 @@ import {smoothieMenu1} from "./smoothies.js"
 
 import logo from '/logo.png';
 
-
+    
 const MenuPage = () => {
   // Sample smoothie menu data
   
