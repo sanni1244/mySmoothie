@@ -15,7 +15,7 @@
     ],
     "routes": [
       { "handle": "filesystem" },
-      { "src": "/api/send-email", "dest": "api/sendEmail.js" }
+      { "src": "/", "dest": "api/sendEmail.js" }
     ]
   }
   
