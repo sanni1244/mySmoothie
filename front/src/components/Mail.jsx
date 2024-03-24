@@ -66,7 +66,7 @@ const MailSender = () => {
         if (!isButtonDisabled) {
             setIsButtonDisabled(true);
             const now = Date.now();
-            const expiration = now + 3000 * 60;
+            const expiration = now + 2000 * 60;
             localStorage.setItem('disableButton', 'true');
             localStorage.setItem('expirationTime', expiration.toString());
             setExpirationTime(expiration);
@@ -75,7 +75,7 @@ const MailSender = () => {
                 localStorage.removeItem('expirationTime');
                 setIsButtonDisabled(false);
                 setExpirationTime(null);
-            }, 3000 * 60);
+            }, 2000 * 60);
         } else {
             alert("Please wait before submitting again.");
         }
