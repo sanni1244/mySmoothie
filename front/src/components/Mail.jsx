@@ -80,9 +80,6 @@ const MailSender = () => {
             alert("Please wait before submitting again.");
         }
         axios.post('http://localhost:5000/api', { subject, name, orderName, price, message, myNumber })
-        // axios.post('/api', { subject, name, orderName, price, message, myNumber })
- 
-        
             .then(response => {
                 console.log(response.data);
             })
