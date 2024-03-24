@@ -59,9 +59,9 @@ const MailSender = () => {
 
         // Clean up timer on component unmount
         return () => clearInterval(timer);
-    }, [myDate]); 
+    }, [myDate]);
 
-    const sendEmail = (e) => {
+    const sendEmail = async (e) => {
         e.preventDefault();
         if (!isButtonDisabled) {
             setIsButtonDisabled(true);
@@ -79,13 +79,19 @@ const MailSender = () => {
         } else {
             alert("Please wait before submitting again.");
         }
-        axios.post('https://my-backend-xi.vercel.app/api', { subject, name, orderName, price, message, myNumber })
-            .then(response => {
-                console.log(response.data);
-            })
-            .catch(error => {
-                console.error('Error sending email:', error);
+        try {
+            const response = await axios.post('https://my-backend-xi.vercel.app/api', {
+              subject,
+              name,
+              orderName,
+              price,
+              message,
+              myNumber
             });
+            console.log(response.data);
+          } catch (error) {
+            console.error('Error sending email:', error);
+          }
     };
 
     const optionChange = (e) => {
@@ -139,7 +145,7 @@ const MailSender = () => {
                         placeholder="08023423423"
                         pattern="(\+?234|0)[789][01]\d{8}"
                         title="Ex. 08000000000"
-                        value={myNumber} onChange={(e) => setNumber(e.target.value)} 
+                        value={myNumber} onChange={(e) => setNumber(e.target.value)}
                     />
                     <label className='text-change' htmlFor="">Comments</label>
                     <textarea

@@ -8,7 +8,7 @@ app.use(bodyParser.json()); // Parse JSON request bodies
 
 // Configure CORS to allow requests from specific origins
 app.use(cors({
-  origin: 'https://my-smoothie.vercel.app', // Allow requests from this origin
+  origin: 'https://missmo.vercel.app', // Allow requests from this origin
   methods: 'GET,PUT,POST,DELETE', // Allow specific HTTP methods
   allowedHeaders: 'Content-Type,Authorization', // Allow specific headers
 }));
@@ -35,8 +35,8 @@ app.post('/api', (req, res) => {
     to: 'sanni.ope.0@gmail.com',
     subject: subject,
     html: `<h2>You have a new order 🥳🥳🥳</h2>
-      <br/><br/>
-      <h4>Your order is from ${name}</h4>
+      <br/>
+      <h4>Order from ${name}</h4>
       <p>Here is the order</p>
       <ul>
       <li> Order:  ${orderName} </li>

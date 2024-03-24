@@ -212,7 +212,7 @@ button {
 }
 
 button:disabled {
-  background-color: #ccc;
+  background-color: rgb(92, 186, 25);
   cursor: not-allowed;
 }
 
