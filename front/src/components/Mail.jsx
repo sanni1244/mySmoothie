@@ -79,7 +79,7 @@ const MailSender = () => {
         } else {
             alert("Please wait before submitting again.");
         }
-        axios.post('https://vercel.com/sanni1244s-projects/my-backend/', { subject, name, orderName, price, message, myNumber })
+        axios.post('https://my-backend-xi.vercel.app/api', { subject, name, orderName, price, message, myNumber })
             .then(response => {
                 console.log(response.data);
             })
