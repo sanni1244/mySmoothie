@@ -79,8 +79,8 @@ const MailSender = () => {
         } else {
             alert("Please wait before submitting again.");
         }
-        // axios.post('http://localhost:5000/send-email', { subject, name, orderName, price, message, myNumber })
-        axios.post('/api', { subject, name, orderName, price, message, myNumber })
+        axios.post('http://localhost:5000/api', { subject, name, orderName, price, message, myNumber })
+        // axios.post('/api', { subject, name, orderName, price, message, myNumber })
  
         
             .then(response => {
