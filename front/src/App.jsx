@@ -9,7 +9,7 @@ import ContactForm from './components/Mail'
   return (
     <>
     <Smoothie />
-    {/* <ContactForm /> */}
+    <ContactForm />
     </>)
 
 
