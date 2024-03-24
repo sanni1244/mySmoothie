@@ -1,11 +1,26 @@
+const express = require('express');
+const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
+const cors = require('cors');
 
-module.exports = async (req, res) => {
+const app = express();
+app.use(cors());
+const PORT = process.env.PORT || 5000;
+
+app.use(bodyParser.json());
+
+// Error handling middleware
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Something went wrong!');
+});
+
+app.post('/api', (req, res) => {
   const { subject, name, orderName, price, message, myNumber } = req.body;
 
   // Validate request body
   if (!subject || !name || !orderName || !price || !message || !myNumber) {
-    return res.status(400).json({ error: 'All fields are required' });
+    return res.status(400).send('All fields are required');
   }
  
   const transporter = nodemailer.createTransport({
@@ -36,12 +51,17 @@ module.exports = async (req, res) => {
     `
   };
 
-  try {
-    const info = await transporter.sendMail(mailOptions);
-    console.log('Email sent: ' + info.response);
-    res.status(200).json({ message: 'Email sent successfully' });
-  } catch (error) {
-    console.error('Error sending email:', error);
-    res.status(500).json({ error: 'Error sending email' });
-  }
-};
+  transporter.sendMail(mailOptions, function(error, info){
+    if (error) {
+      console.error('Error sending email:', error);
+      res.status(500).send('Error sending email: ' + error.message); 
+    } else {
+      console.log('Email sent: ' + info.response);
+      res.send('Email sent successfully');
+    }
+  });
+});
+
+app.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}`);
+});
