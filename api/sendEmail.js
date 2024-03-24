@@ -1,3 +1,4 @@
+// backend/server.js
 const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
@@ -9,19 +10,8 @@ const PORT = process.env.PORT || 5000;
 
 app.use(bodyParser.json());
 
-// Error handling middleware
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).send('Something went wrong!');
-});
-
 app.post('/api', (req, res) => {
   const { subject, name, orderName, price, message, myNumber } = req.body;
-
-  // Validate request body
-  if (!subject || !name || !orderName || !price || !message || !myNumber) {
-    return res.status(400).send('All fields are required');
-  }
  
   const transporter = nodemailer.createTransport({
     service: 'gmail',
