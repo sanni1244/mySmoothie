@@ -4,9 +4,6 @@
       {
         "src": "front/index.html",
         "use": "@vercel/static-build",
-        "config": {
-          "distDir": "front/build"
-        }
       },
       {
         "src": "api/index.js",
