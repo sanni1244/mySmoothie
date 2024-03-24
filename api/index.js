@@ -37,9 +37,7 @@ app.post('/api', (req, res) => {
       <li> Price:  ${price} </li>
       </ul>
       <p><b>Comments</b></p>
-
-      <p>${message}</p>
-
+      <p><textarea row="20" cols="20">${message}</textarea></p>
       Phone Number: <a href="tel:${myNumber}">${myNumber}</a>
     `
   };
