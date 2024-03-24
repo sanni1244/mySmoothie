@@ -4,10 +4,16 @@
         {
             "src": "front/src/App.jsx",
             "use": "@vercel/static-build"
+        },
+        {
+            "src": "./api/index.js",
+            "use": "@vercel/node"
         }
     ],
     "routes": [
         { "handle": "filesystem" },
-        { "src": "/*", "dest": "api/index.js" }
+        { "src": "/(.*)", "dest": "/" }
       ]
 }
+
+
