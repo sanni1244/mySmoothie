@@ -76,10 +76,10 @@ const MailSender = () => {
                 setIsButtonDisabled(false);
                 setExpirationTime(null);
             }, 3000 * 60);
-        } else { 
+        } else {
             alert("Please wait before submitting again.");
         }
-        axios.post('/api', { subject, name, orderName, price, message, myNumber })
+        axios.post('http://localhost:5000/api', { subject, name, orderName, price, message, myNumber })
         // axios.post('/api', { subject, name, orderName, price, message, myNumber })
  
         

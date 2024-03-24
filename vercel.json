@@ -1,10 +1,18 @@
 {
     "version": 2,
     "builds": [
-      {
-        "src": "front/package.json",
-        "use": "@vercel/static-build"
-      }
-    ]
-  }
-  
+        {
+            "src": "front/src/App.jsx",
+            "use": "@vercel/static-build"
+        }
+    ],
+    "functions": {
+        "api": {
+            "handler": "api/index.js"
+        }
+    },
+    "routes": [
+        { "handle": "filesystem" },
+        { "src": "/*", "dest": "api/index.js" }
+      ]
+}
