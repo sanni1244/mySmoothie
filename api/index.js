@@ -4,12 +4,18 @@ const nodemailer = require('nodemailer');
 const cors = require('cors');
 
 const app = express();
-app.use(cors());
 app.use(bodyParser.json()); // Parse JSON request bodies
+
+// Configure CORS to allow requests from specific origins
+app.use(cors({
+  origin: 'https://my-smoothie.vercel.app', // Allow requests from this origin
+  methods: 'GET,PUT,POST,DELETE', // Allow specific HTTP methods
+  allowedHeaders: 'Content-Type,Authorization', // Allow specific headers
+}));
 
 const PORT = process.env.PORT || 5000;
 
-app.post('/', (req, res) => {
+app.post('/api', (req, res) => {
   const { subject, name, orderName, price, message, myNumber } = req.body;
 
   if (!subject || !name || !orderName || !price || !message || !myNumber) {
@@ -37,7 +43,9 @@ app.post('/', (req, res) => {
       <li> Price:  ${price} </li>
       </ul>
       <p><b>Comments</b></p>
-      <p><textarea row="20" cols="20">${message}</textarea></p>
+
+      <p>${message}</p>
+
       Phone Number: <a href="tel:${myNumber}">${myNumber}</a>
     `
   };
@@ -48,6 +56,7 @@ app.post('/', (req, res) => {
       res.status(500).send('Error sending email: ' + error.message);
     } else {
       console.log('Email sent: ' + info.response);
+      res.header('Access-Control-Allow-Origin', '*');
       res.send('Email sent successfully');
     }
   });
