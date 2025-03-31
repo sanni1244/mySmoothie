@@ -11,9 +11,9 @@ const MenuPage = () => {
     <div className="menu-page">
       <header className='head-style'>
         <img src={logo} alt="Smoothie Business Logo" />
-        <h1>Miss Mo Healthy Juice And Smoothie</h1>
-        <p className='small-package'>You can customize your own fruit mix!</p>
-        <p className='small-package'>phone number: <a className='' href="tel:07046267731">07046267731</a></p>
+        <h1>Naija Blends</h1>
+        <p className='small-package'>Blend It. Sip It. Love It.</p>
+        <p className='small-package'>phone number: <a className='' href="tel:09083575587">09083575587</a></p>
       </header>
       <h3 className='style-menu'>Menu 1</h3>
       <div className="smoothie-list">

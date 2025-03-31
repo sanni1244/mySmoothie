@@ -168,9 +168,9 @@ const MailSender = () => {
             <footer>
                 <div className="contact-container">
                     <h2>Contact Us</h2>
-                    <p><IoCall /> <a href="tel:07046267731">Call Me</a></p>
-                    <p><MdOutlineMail /> <a href="mailto:akinseloyintosinjoy@gmail.com">Send a Mail</a></p>
-                    <p><FaWhatsapp /> <a href="https://wa.me/2347046267731">Whatsapp Me</a></p>
+                    <p><IoCall /> <a href="tel:09083575587">Call Me</a></p>
+                    <p><MdOutlineMail /> <a href="mailto:astro8va@gmail.com.com">Send a Mail</a></p>
+                    <p><FaWhatsapp /> <a href="https://wa.me/2349083575587">Whatsapp Me</a></p>
                     <p><IoLocationSharp /> Lagos, Nigeria</p>
                 </div>
             </footer>
