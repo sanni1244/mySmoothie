@@ -26,7 +26,7 @@ app.post('/api', (req, res) => {
     service: 'gmail',
     auth: {
       user: 'sanni.ope.0@gmail.com',
-      pass: process.env.PASS_KEY
+      pass: 'etlr mgmk lalf hwjm'
     }
   });
 
