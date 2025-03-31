@@ -8,7 +8,7 @@ app.use(bodyParser.json()); // Parse JSON request bodies
 
 // Configure CORS to allow requests from specific origins
 app.use(cors({
-  origin: 'https://missmo.vercel.app', // Allow requests from this origin
+  origin: 'https://naijablends.vercel.app', // Allow requests from this origin
   methods: 'GET,PUT,POST,DELETE', // Allow specific HTTP methods
   allowedHeaders: 'Content-Type,Authorization', // Allow specific headers
 }));
