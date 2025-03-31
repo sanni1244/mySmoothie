@@ -2,13 +2,13 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
-
+require('dotenv').config();
 const app = express();
 app.use(bodyParser.json()); // Parse JSON request bodies
 
 // Configure CORS to allow requests from specific origins
 app.use(cors({
-  origin: 'https://naijablends.vercel.app', // Allow requests from this origin
+  origin: process.env.Site, // Allow requests from this origin
   methods: 'GET,PUT,POST,DELETE', // Allow specific HTTP methods
   allowedHeaders: 'Content-Type,Authorization', // Allow specific headers
 }));
@@ -25,14 +25,14 @@ app.post('/api', (req, res) => {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'sanni.ope.0@gmail.com',
-      pass: 'etlr mgmk lalf hwjm'
+      user: process.env.EMAIL_USER, 
+      pass: process.env.PASS_KEY
     }
   });
 
   const mailOptions = {
-    from: 'sanni.ope.0@gmail.com',
-    to: 'sanni.ope.0@gmail.com',
+    from: process.env.PORT,
+    to: process.env.PORT,
     subject: subject,
     html: `<h2>You have a new order 🥳🥳🥳</h2>
       <br/>
