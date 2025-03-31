@@ -32,7 +32,7 @@ export const smoothieMenu1 = [
     {
       name: 'Pawpaw and Mango Smoothie',
       description: 'A tropical delight combining the smooth texture of pawpaw with the tangy sweetness of mango, creating a refreshing and exotic beverage bursting with flavor.',
-      imageSrc: 'https://cdn.tarladalal.com/members/9306/big/big_papaya_mango_smoothie_(__healthy_breakfast)-8363.jpg',
+      imageSrc: 'https://oliveoilsfromspain.org/sites/default/files/recetas/smoothie_papaya_2.jpg',
       price: '3000'
     },
     {
@@ -57,6 +57,12 @@ export const smoothieMenu1 = [
       name: 'Orange Smoothie',
       description: 'A zesty and refreshing blend of juicy oranges, yogurt, and a touch of honey, providing a burst of citrusy goodness in every sip.',
       imageSrc: 'https://cdn1.foodviva.com/static-content/food-images/smoothie-recipes/orange-juice-smoothie-recipe/orange-juice-smoothie-recipe.jpg',
+      price: '4000'
+    },
+    {
+      name: 'Avocado Banana Smoothie',
+      description: 'A rich and creamy blend of ripe avocado and sweet bananas, offering a velvety texture packed with healthy fats and natural sweetness for a nourishing treat.',
+      imageSrc: 'https://pipingpotcurry.com/wp-content/uploads/2021/08/Avocado-banana-smoothie-garnished-with-mint-leaves.jpg',
       price: '4000'
     },
     {
@@ -122,6 +128,18 @@ export const smoothieMenu1 = [
       description: 'A classic and refreshing beverage made from the succulent sweetness of grapes, offering a burst of fruity flavor in every sip.',
       imageSrc: 'https://www.alphafoodie.com/wp-content/uploads/2022/03/How-to-Make-Grape-Juice-Square.jpeg',
       price: '4500'
+    },
+    {
+      name: 'Cucumber, Lime Juice',
+      description: 'A crisp and hydrating fusion of fresh cucumber and zesty lime, delivering a revitalizing burst of freshness to quench your thirst.',
+      imageSrc: 'https://www.alphafoodie.com/wp-content/uploads/2021/04/cucumber-lemonade-1-of-1.jpeg',
+      price: '3800'
+    },
+    {
+      name: 'Pomegranate Juice',
+      description: 'A bold and antioxidant-rich juice made from freshly pressed pomegranates, offering a sweet-tart flavor and a powerful boost of nutrients in every sip.',
+      imageSrc: 'https://ministryofcurry.com/wp-content/uploads/2018/11/pomegranate-juice-1.jpg',
+      price: '6000'
     },
     {
       name: 'Customized Juice',

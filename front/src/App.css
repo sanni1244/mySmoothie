@@ -80,7 +80,8 @@ h1 {
 
 
 .head-style{
-  background: linear-gradient(#3B7123, #3B7123, #3a7123a2, #fff, #fff);
+  /* background: linear-gradient(#3B7123, #3B7123, #3a7123a2, #fff, #fff); */
+  background-color: #FDF6E6;
   padding: 1rem;
 }
 
@@ -149,13 +150,9 @@ hr{
 }
 
 
-
-
-
 .form-container {
-  padding: 3rem;
-  padding-top: 1rem;
-  max-width: 1200px;
+  padding: 1rem 3rem 1rem 3rem;
+  max-width: 600px;
   margin: 0 auto;
 }
 
