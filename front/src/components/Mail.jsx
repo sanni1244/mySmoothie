@@ -167,21 +167,6 @@ const MailSender = () => {
             </div>
             <footer>
                 <div className="footer-container">
-                    <div className="contact-container">
-                        <h2>Contact Us</h2>
-                        <p><IoCall /> <a href="tel:09083575587">Call Me</a></p>
-                        <p><MdOutlineMail /> <a href="mailto:astro8va@gmail.com">Send a Mail</a></p>
-                        <p><FaWhatsapp /> <a href="https://wa.me/2349083575587">WhatsApp Me</a></p>
-                        <p><IoLocationSharp /> Lagos, Nigeria</p>
-                    </div>
-
-                    <div className="social-container">
-                        <h2>Follow Us</h2>
-                        <p><FaFacebook /> <a href="https://facebook.com/yourpage">Facebook</a></p>
-                        <p><FaInstagram /> <a href="https://instagram.com/yourpage">Instagram</a></p>
-                        <p><FaTwitter /> <a href="https://twitter.com/yourpage">Twitter</a></p>
-                    </div>
-
                     <div className="business-hours">
                         <h2>Business Hours</h2>
                         <p>Mon - Fri: 8:00 AM - 8:00 PM</p>
@@ -194,7 +179,13 @@ const MailSender = () => {
                         <button>Subscribe</button>
                     </div>
                 </div>
-
+                <div className="contact-container">
+                        <h2>Contact Us</h2>
+                        <p><IoCall /> <a href="tel:09083575587">Call Me</a></p>
+                        <p><MdOutlineMail /> <a href="mailto:astro8va@gmail.com">Send a Mail</a></p>
+                        <p><FaWhatsapp /> <a href="https://wa.me/2349083575587">WhatsApp Me</a></p>
+                        <p><IoLocationSharp /> Lagos, Nigeria</p>
+                    </div>
                 <div className="footer-bottom">
                     <p>&copy; 2025 Naija Blends. All Rights Reserved.</p>
                 </div>
